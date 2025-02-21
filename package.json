@@ -1,0 +1,54 @@
+{
+  "name": "astro-cloudflare-types",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "Generate Cloudflare bindings types from Wrangler configuration file.",
+  "author": "Jiakun Zhao <hi@zhaojiakun.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/jiakun-zhao/astro-cloudflare-types#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiakun-zhao/astro-cloudflare-types.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jiakun-zhao/astro-cloudflare-types/issues"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "pnpm stub && pnpm -r dev",
+    "prepublishOnly": "pnpm build",
+    "release": "bumpp && pnpm publish && npx cnpm sync astro-cloudflare-types",
+    "stub": "unbuild --stub",
+    "test": "vitest -u"
+  },
+  "peerDependencies": {
+    "astro": "^5.3.0"
+  },
+  "dependencies": {
+    "@cloudflare/workers-types": "^4.20250214.0",
+    "jsonc-parser": "^3.3.1",
+    "toml": "^3.0.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.3.0",
+    "@types/node": "^22.13.4",
+    "astro": "^5.3.0",
+    "bumpp": "^10.0.3",
+    "eslint": "^9.20.1",
+    "typescript": "^5.7.3",
+    "unbuild": "^3.3.1"
+  }
+}

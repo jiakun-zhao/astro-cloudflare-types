@@ -1,0 +1,11 @@
+[env.production.vars]
+HELLO = "wxd16dd975fd877585"
+
+[[env.production.kv_namespaces]]
+binding = "HELLO_KV"
+
+[[env.production.d1_databases]]
+binding = "HELLO_D1"
+
+[[env.production.r2_buckets]]
+binding = "HELLO_R2"
