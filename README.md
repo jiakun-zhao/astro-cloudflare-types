@@ -41,4 +41,4 @@ export default defineConfig({
 
 ### LICENSE
 
-MIT - Copyright (c) 2025 Jiakun Zhao
+MIT License © 2025-PRESENT [Jiakun Zhao](https://github.com/jiakun-zhao)
